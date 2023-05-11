@@ -55,6 +55,7 @@ public class OrderItem {
 		id.setOrder(order);
 	}
 	
+	
 	public Product getProduct() {
 		return id.getProduct();
 	}
@@ -79,6 +80,10 @@ public class OrderItem {
 			return false;
 		OrderItem other = (OrderItem) obj;
 		return Objects.equals(id, other.id);
+	}
+	
+	public double subTotal() {
+		return price * quantity;
 	}
 	
 	
